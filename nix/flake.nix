@@ -17,7 +17,7 @@
 
   outputs = inputs:
     with inputs; let
-      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets.json");
+      secrets = builtins.fromJSON (builtins.readFile "/home/Tnixc/config/nix/secrets.json");
 
       nixpkgsWithOverlays = with inputs; rec {
         config = {
@@ -74,8 +74,8 @@
     in {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
 
-      nixosConfigurations.shadow = mkNixosConfiguration {
-        hostname = "shadow";
+      nixosConfigurations.Shadow = mkNixosConfiguration {
+        hostname = "Shadow";
         username = "Tnixc"; # FIXME: replace with your own username!
         modules = [
           nixos-wsl.nixosModules.wsl
