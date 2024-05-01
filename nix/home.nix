@@ -207,7 +207,7 @@ in {
         cd = "z";
         nixgc = "nix-collect-garbage --delete-old";
         refresh = "source ${config.home.homeDirectory}/.zshrc";
-        nixre = "sudo nixos-rebuild switch --flake ~/config/nix#Shadow --impure";
+        nixre = "sudo nixos-rebuild switch --flake ~/config/nix#Shadow --impure | grep 'building the system configuration...'";
         show_path = "echo $PATH | tr ':' '\n'";
         pbcopy = "/mnt/c/Windows/System32/clip.exe";
         pbpaste = "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -command 'Get-Clipboard'";
