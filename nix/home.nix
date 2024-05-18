@@ -49,6 +49,7 @@
 
     # core languages
     rustup
+    clang
     go
     lua
     nodejs
